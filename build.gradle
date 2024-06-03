@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+repositories {
+    addAll(buildscript.repositories)
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "gridwars.starter.EmulatorRunner"
+
+jar {
+    from sourceSets.main.java
+
+    archiveName = "gridwars-bot.jar"
+
+    manifest {
+        attributes(
+            // TODO specify the fully qualified class name of your bot here
+            'Bot-Class-Name': 'gridwars.starter.ExpandBot'
+        )
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'lib')
+}
