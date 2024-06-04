@@ -7,6 +7,6 @@ import cern.ais.gridwars.Emulator;
  */
 public class EmulatorRunner {
     public static void main(String[] args) {
-        Emulator.playMatch(new ExpandBot(), new ExpandBot());
+        Emulator.playMatch(new QuantumConqueror(), new QuantumConqueror());
     }
 }
